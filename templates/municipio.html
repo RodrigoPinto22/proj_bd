@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ municipio.nomeMunicipio }}</h1>
+
+{% for contrato in municipio %}
+    <p>
+      <b>Preço: </b>{{ contrato.precoContratual }}
+      <b>Data de execução: </b> {{ contrato.dataCelebracaoContrato }}
+    </p>
+    {% endfor %}
+
+{% endblock %}

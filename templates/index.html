@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table>
+<tr>
+  <th>Items</th>
+  <th>Count</th>
+</tr>
+<tr>
+  <td>Contratos</td>
+  <td>{{ stats.n_Contratos }}</td>
+</tr>
+<tr>
+  <td>Adjudicantes</td>
+  <td>{{ stats.n_Adjudicantes }}</td>
+</tr>
+<tr>
+  <td>Adjudicatarios</td>
+  <td>{{ stats.n_Adjudicatarios }}</td>
+</tr>
+<tr>
+  <td>Cpv</td>
+  <td>{{ stats.n_Cpv }}</td>
+</tr>
+<tr>
+  <td>Locais de Execucao</td>
+  <td>{{ stats.n_LocalExecucao }}</td>
+</tr>
+<tr>
+  <td>Municipios</td>
+  <td>{{stats.n_Municipios }}</td>
+</tr>
+<tr>
+  <td>Distritos</td>
+  <td>{{ stats.n_Distritos }}</td>
+</tr>
+<tr>
+  <td>Paises</td>
+  <td>{{ stats.n_Paises }}</td>
+</tr>
+</table>
+
+
+<h2>Sample functionality</h2>
+
+<h3>Contratos</h3>
+
+<p>
+   <a href="/contratos/">Lista de contratos</a>
+</p>
+<form name="mid" action="javascript:window.open('/contratos/'+document.forms['mid'].elements['id'].value,'_self')">
+   Id do contrato:<input value="123" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+
+
+{% endblock %}
+

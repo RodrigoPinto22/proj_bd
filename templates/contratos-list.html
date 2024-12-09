@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Contratos</h1>
+<table>
+  <tr>
+    <th>
+      <b>idContrato</b>
+    </th>
+    <th>
+      <b>idAdjudicante</b>
+    </th>
+    <th>
+      <b>idAdjudicatario</b>
+    </th>
+    <th>
+      <b>Localizacao</b>
+    </th> <th>
+      <b>Cpv</b>
+    </th>
+    <th>
+      <b>Tipo de contrato</b>
+    </th>
+    <th>
+      <b>Tipo de Procedimento</b>
+    </th>
+    <th>
+      <b>Objeto de Contrato</b>
+    </th>
+       <th>
+      <b>Data de publicação</b>
+    </th>
+    <th>
+      <b>Data de celebração</b>
+    </th>
+    <th>
+      <b>Preço do contrato</b>
+    </th>
+    <th>
+      <b>Prazo de execução</b>
+    </th>
+       <th>
+      <b>Fundamentação</b>
+    </th>
+    <th>
+      <b>Procedimento centralizado</b>
+    </th>
+    <th>
+      <b>Descricao do acordo</b>
+    </th>
+  </tr>
+
+  {% for contrato in contratos %}
+  <tr>
+    <td>
+      <a href="/contratos/{{ contrato.idContrato }}">{{ contrato.idContrato }}</a>
+    </td>
+    <td>
+      {{ contrato.idAdjudicante }}
+    </td>
+    <td>
+      {{ contrato.idAdjudicatario  }}
+    </td>
+       <td>
+      {{ contrato.idLocalizacao }}
+    </td>
+    <td>
+      {{ contrato.tipoContrato }}
+    </td>
+    <td>
+      {{ contrato.tipoProcedimento }}
+    </td>
+    <td>
+      {{ contrato.objetoContrato }}
+    </td>
+    <td>
+      {{ contrato.dataPublicacao }}
+    </td>
+    <td>
+      {{ contrato.dataCelebracao }}
+    </td>
+    <td>
+      {{ contrato.precoContratual }}
+    </td>
+    <td>
+      {{ contrato.prazoExecucao }}
+    </td>
+    <td>
+      {{ contrato.fundamentacao }}
+    </td>
+    <td>
+      {{ contrato.procedimentoCentralizado }}
+    </td>
+    <td>
+      {{ contrato.descAcordoQuadro }}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

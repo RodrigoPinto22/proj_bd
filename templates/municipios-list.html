@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Municipios</h1>
+<table>
+  <tr>
+    <th>
+      <b>codigoMunicipio</b>
+    </th>
+    <th>
+      <b>Municipio</b>
+    </th>
+    <th>
+      <b>Distrito</b>
+    </th>
+  </tr>
+
+  {% for municipio in municipios %}
+  <tr>
+    <td>
+      <a href="/municipios/{{ municipio.codigoMunicipio }}">{{ municipio.codigoMunicipio }}</a>
+    </td>
+    <td>
+      {{ municipio.nomeMunicipio }}
+    </td>
+       <td>
+      {{ municipio.codigoDistrito }}
+    </td>
+
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

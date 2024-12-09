@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ contrato.idContrato }}</h1>
+<p>
+  <b>idContrato: </b>{{ contrato.idContrato }}
+</p>
+<p>
+  <b>idAdjudicante: </b>{{ contrato.idAdjudicante }}
+</p>
+<p>
+  <b>idAdjudicatario: </b>{{ contrato.idAdjudicatario }}
+</p>
+<p>
+  <b>Localizacao: </b>{{ contrato.idLocalizacao }}
+</p>
+<p>
+  <b>Cpv: </b> {{ contrato.idCpv }}
+</p>
+<p>
+  <b>Tipo de contrato: </b> {{ contrato.tipoContrato }}
+</p>
+  <b>Tipo de Procedimento: </b> {{ contrato.tipoProcedimento }}
+</p>
+</p>
+  <b>Objeto de Contrato: </b> {{ contrato.objetoContrato }}
+</p>
+</p>
+  <b>Data de publicação: </b> {{ contrato.dataPublicacao }}
+</p>
+</p>
+  <b>Data de celebração: </b> {{ contrato.dataCelebracaoContrato }}
+</p>
+</p>
+  <b>Preço contratual: </b> {{ contrato.precoContratual }}
+</p>
+</p>
+  <b>Prazo de execucao: </b> {{ contrato.prazoExecucao }}
+</p>
+</p>
+  <b>Fundamentação: </b>  {{ contrato.fundamentacao }}
+</p>
+</p>
+  <b>Procedimento centralizado: </b> {{ contrato.procedimentoCentralizado }}
+</p>
+</p>
+  <b>Descrição do acordo: </b> {{ contrato.descAcordoQuadro }}
+</p>
+{% endblock %}
