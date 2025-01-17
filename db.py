@@ -2,7 +2,6 @@ import logging
 import sqlite3
 import re
 
-
 global DB
 DB = dict()
 
